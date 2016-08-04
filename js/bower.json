@@ -1,0 +1,24 @@
+{
+  "name": "bower.json",
+  "authors": [
+    "Adam Denny"
+  ],
+  "description": "Materialize React Theme",
+  "main": "main.js",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "hammerjs": "^2.0.8",
+    "jquery-hammerjs": "^2.0.0",
+    "Materialize": "materialize#^0.97.6",
+    "requirejs-react-jsx": "^1.0.2",
+    "react-router": "^2.5.2"
+  }
+}

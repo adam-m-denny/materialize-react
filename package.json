@@ -1,0 +1,13 @@
+{
+  "name": "materialize-react",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.0.0"
+  },
+  "dependencies": {
+    "react-router": "^2.5.2"
+  }
+}
