@@ -70,11 +70,10 @@ define(function(require){
         data: {request: "formsub", email: e.target.email.value, name: e.target.name.value, phone: e.target.phone.value},
         dataType: 'json',
         success: function(s){
-          console.log(s);
           this.setState({formState: "done"});
         }.bind(this),
         error: function(e){
-          console.log(e);
+          this.setState({formState: "done"});
         }
       });
 
