@@ -74,7 +74,7 @@ define(function(require){
         }.bind(this),
         error: function(e){
           this.setState({formState: "done"});
-        }
+        }.bind(this)
       });
 
     },
