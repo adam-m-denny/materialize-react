@@ -23,7 +23,7 @@
         curl_setopt($ch, CURLOPT_FRESH_CONNECT, true);
         curl_setopt($ch, CURLOPT_USERPWD, $AUTH_ID . ":" . $AUTH_TOKEN);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, false); 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
         $response = curl_exec( $ch );
         curl_close($ch);
       }
