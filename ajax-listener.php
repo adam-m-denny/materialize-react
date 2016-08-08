@@ -43,6 +43,6 @@
     $message = "OWP has a new appointment request from ". $_POST['name'] . " at " . $_POST['email'] . " " . $_POST['phone'];
     mail($recipient, $subject, $message, $headers);
 
-    echo("{'success': 'true'}");
+    echo("success");
   }
 ?>
