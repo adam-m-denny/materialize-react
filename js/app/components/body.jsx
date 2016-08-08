@@ -7,7 +7,6 @@ define(function(require){
   var Route = require('react-router').Route;
   var Link = require('react-router').Link;
   var browserHistory = require('react-router').browserHistory;
-
   var CSSTransitionGroup = React.addons.CSSTransitionGroup;
 
   var Page = React.createClass({
@@ -49,13 +48,15 @@ define(function(require){
         formState: 'ready'
       }
     },
+    componentWillMount: function(){
+    },
     componentDidMount: function(){
       $('.parallax').parallax();
-      //console.log("home mounted");
+      FB.XFBML.parse()
     },
     componentDidUpdate: function(){
       $('.parallax').parallax();
-      //console.log("home mounted");
+      FB.XFBML.parse()
     },
     animationEnded: function(){
       console.log("animationEnded");
@@ -63,7 +64,20 @@ define(function(require){
     submitHandler: function(e){
       console.log(e);
       e.preventDefault();
-      this.setState({formState: "done"});
+      this.setState({formState: "submitting"})
+      $.ajax(rootDir + "/ajax-listener.php", {
+        method: 'POST',
+        data: {request: "formsub", email: e.target.email.value, name: e.target.name.value, phone: e.target.phone.value},
+        dataType: 'json',
+        success: function(s){
+          console.log(s);
+          this.setState({formState: "done"});
+        }.bind(this),
+        error: function(e){
+          console.log(e);
+        }
+      });
+
     },
     signupFormClass: function(){
       return "col l4 m6 s12 offset-l8 offset-m6 z-depth-3 signup-form " + this.state.formState;
@@ -73,6 +87,7 @@ define(function(require){
     },
     render: function(){
       var _this = this;
+
       /*var fadeOut = function(){
         if(_this.props.visible){
           return "parallax-body fade-in"
@@ -95,15 +110,19 @@ define(function(require){
                   <h3 className="z-depth-1">REGISTRATION FORM</h3>
                   <div className="input-field">
                     <input type="text" name="name" id="name" required />
-                    <label for="name">Name</label>
+                    <label htmlFor="name">Name</label>
                   </div>
                   <div className="input-field">
                     <input type="number" id="phone" name="phone" required />
-                    <label for="phone">Phone</label>
+                    <label htmlFor="phone">Phone</label>
                   </div>
                   <div className="input-field">
                     <input type="email" id="email" name="email" required />
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
+                  </div>
+                  <div className="bot-filter">
+                    <input type="checkbox" id="bot-filter" name="bots" />
+                    <label htmlFor="bots">Please check this box to ensure that you are not a robot.</label>
                   </div>
                   <label className="warning">By submitting this form I allow OWP to contact me to arrange a consultation for aquiring my OMMP Card at the OWP Local Portland Medical Office</label>
                   <input type="submit" className="waves-effect waves-light btn" value="Submit" />
