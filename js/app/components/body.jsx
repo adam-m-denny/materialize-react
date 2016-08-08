@@ -72,7 +72,10 @@ define(function(require){
         success: function(s){
           console.log(s);
           this.setState({formState: "done"});
-        }.bind(this)
+        }.bind(this),
+        error: function(e){
+          console.log(e);
+        }
       });
 
     },

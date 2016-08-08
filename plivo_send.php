@@ -13,7 +13,6 @@
       $url = 'https://api.plivo.com/v1/Account/'.$AUTH_ID.'/Message/';
       $data = array("src" => "$src", "dst" => "$dst", "text" => "$text");
       $data_string = json_encode($data);
-      echo count($numbers);
       for($i = 0; $i < count($numbers); ++$i){
         $data = array("src" => "$src", "dst" => "$numbers[$i]", "text" => "$text");
         $data_string = json_encode($data);
@@ -24,6 +23,7 @@
         curl_setopt($ch, CURLOPT_FRESH_CONNECT, true);
         curl_setopt($ch, CURLOPT_USERPWD, $AUTH_ID . ":" . $AUTH_TOKEN);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, false); 
         $response = curl_exec( $ch );
         curl_close($ch);
       }
