@@ -1,8 +1,8 @@
 require.config({
   paths: {
-    "react": "bower_components/react/react-with-addons",
+    "react": "bower_components/react/react-with-addons.min",
     "react-dom": "bower_components/react/react-dom.min",
-    "react-router": "bower_components/react-router/umd/ReactRouter",
+    "react-router": "bower_components/react-router/umd/ReactRouter.min",
     "babel": "bower_components/requirejs-react-jsx/babel-5.8.34.min",
     "jsx": "bower_components/requirejs-react-jsx/jsx",
     "text": "bower_components/requirejs-text/text",
