@@ -66,10 +66,8 @@ define(function(require){
       FB.XFBML.parse()
     },
     animationEnded: function(){
-      console.log("animationEnded");
     },
     submitHandler: function(e){
-      console.log(e);
       e.preventDefault();
       this.setState({formState: "submitting"})
       $.ajax(rootDir + "/ajax-listener.php", {
@@ -91,6 +89,9 @@ define(function(require){
     signupFormBackClass: function(){
       return "col l4 m6 s12 offset-l8 offset-m6 z-depth-3 signup-form-back " + this.state.formState;
     },
+    findPost: function(post) {
+      return post.post_id === this.props.posts[this.props.route].ID;
+    },
     render: function(){
       var _this = this;
 
@@ -109,7 +110,7 @@ define(function(require){
       return (
         <div onAnimationEnd={this.animationEnded()}>
           <div className="parallax-container">
-            <div className="parallax"><img src={rootDir + "/images/parallax1.jpg"} /></div>
+            <div className="parallax"><img src={rootDir + "/images/" + this.props.images.find(this.findPost).meta_value} /></div>
             <div className="container">
               <div className="row">
                 <form className={this.signupFormClass()} onSubmit={this.submitHandler}>
@@ -155,8 +156,9 @@ define(function(require){
       return {
         posts: [
           {
+            ID: 1,
             post_title: "",
-            post_content: ""
+            post_content: "",
           },
           {
             post_title: "",
@@ -171,19 +173,36 @@ define(function(require){
             post_content: ""
           }
         ],
-        route: "Home"
+        images: [
+          {
+            meta_value: "owp_home_one_NEW.jpg",
+            post_id: 1
+          }
+        ],
+        route: 0
       };
     },
     componentDidMount: function(){
       $.ajax(rootDir + "/ajax-listener.php", {
         method: 'POST',
-        data: {request: "pages"},
+        data: {request: "all"},
         dataType: 'json',
         success: function(s){
           var results = this.sortByKey(s, "menu_order");
+          console.log(s);
           this.setState({
             posts: results,
             route: this.props.route
+          });
+        }.bind(this)
+      });
+      $.ajax(rootDir + "/ajax-listener.php", {
+        method: 'POST',
+        data: {request: "getimages"},
+        dataType: 'json',
+        success: function(s){
+          this.setState({
+            images: s
           });
         }.bind(this)
       });
@@ -218,7 +237,7 @@ define(function(require){
       return (
         <CSSTransitionGroup transitionName="example" component="div" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
           <div>
-            <Home key="home" posts={_this.state.posts} route={_this.props.route} />
+            <Home key="home" posts={_this.state.posts} route={_this.props.route} images={_this.state.images}/>
           </div>
         </CSSTransitionGroup>
       )

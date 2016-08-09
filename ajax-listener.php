@@ -23,6 +23,11 @@
     $json = json_encode($results);
     echo($json);
   }
+  if($_POST['request'] == "getimages"){
+    $results = $wpdb->get_results( 'SELECT * FROM wp_postmeta WHERE meta_key = "image"', OBJECT );
+    $json = json_encode($results);
+    echo($json);
+  }
   if($_POST['request'] == "formsub"){
     require './plivo_send.php';
 
