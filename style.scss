@@ -51,7 +51,7 @@ html {
 
 .brand-logo {
   img {
-    @media all and (max-width: 768px){
+    @media all and (max-width: 992px){
       max-height: 70px;
     }
   }
@@ -67,6 +67,10 @@ html {
 
 .parallax-container {
   height: 400px;
+
+  @media all and (max-width: 768px){
+    height: 600px;
+  }
 }
 
 .example-enter {
@@ -104,6 +108,10 @@ html {
 }
 nav {
   height: 40px;
+
+  @media all and (max-width: 992px){
+    height: 70px;
+  }
   ul {
     li {
       height: 40px;
@@ -124,6 +132,11 @@ nav {
 
           &.fa {
             font-size: 1em;
+
+            &:hover {
+              background-color: $orange;
+              color: #fff;
+            }
           }
           &::before {
             position: relative;
@@ -146,6 +159,10 @@ nav {
         height: 40px;
         line-height: 40px;
         font-size: 2em;
+        @media all and (max-width: 992px){
+          height: 70px;
+          line-height: 70px;
+        }
       }
     }
   }
@@ -305,14 +322,17 @@ footer {
 
 .owp-green {
   color: $green;
+  font-weight: bold;
 }
 
 .owp-orange {
   color: $orange;
+  font-weight: bold;
 }
 
 .owp-blue {
   color: $blue;
+  font-weight: bold;
 }
 
 .page-title {
@@ -320,7 +340,6 @@ footer {
   font-size: 1.1em;
   padding-bottom: 10px;
   border-bottom: 2px solid #000;
-  font-weight: bold;
 }
 
 .page-footer {
@@ -343,4 +362,35 @@ footer {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: -20px;
+}
+
+.accord-header {
+  background: $orange;
+  width: 100%;
+  display: block;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+h5.accord-header-text {
+  padding: 10px 0 0px 10px;
+  font-size: 1.2em;
+}
+
+.accord-text {
+  transition: 0.5s all;
+  overflow: hidden;
+  background: #fff;
+  font-size: 0.8em;
+}
+
+.accord-header + .accord-text {
+  max-height: 0px;
+  transition: 0.75s all;
+  color: #000;
+  font-size: 1em;
+}
+
+.accord-header:checked + .accord-text {
+  max-height: 500px;
 }

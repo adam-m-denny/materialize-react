@@ -56,6 +56,13 @@ define(function(require){
     },
     componentDidUpdate: function(){
       $('.parallax').parallax();
+      $('label.accord-header').click(function(){
+        if(!$(this).children('.accord-header')[0].checked){
+          $(this).css({'background-color' : '#fb941b'});
+        } else {
+          $(this).css({'background-color' : '#35bdef'});
+        }
+      })
       FB.XFBML.parse()
     },
     animationEnded: function(){
