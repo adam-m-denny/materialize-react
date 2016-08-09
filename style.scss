@@ -69,7 +69,7 @@ html {
   height: 400px;
 
   @media all and (max-width: 768px){
-    height: 600px;
+    height: 480px;
   }
 }
 
@@ -219,6 +219,10 @@ footer {
   backface-visibility: hidden;
   transform: rotateY(0deg);
 
+  @media all and (max-width: 768px){
+    margin-top: 175px;
+  }
+
   h3 {
     font-size: 1em;
     color: #fff;
@@ -250,21 +254,6 @@ footer {
 
     }
   }
-  //
-  // label {
-  //   width: 33%;
-  //   float: left;
-  //   color: #fff;
-  //   font-size: 1.1em;
-  //   margin-bottom: 17px;
-  //   clear: left;
-  //
-  //   &.checkbox {
-  //     font-size: 0.8em;
-  //     width: 66%;
-  //     float: right;
-  //   }
-  // }
 
   input[type="text"], input[type="email"], input[type="number"] {
     margin: 0;
@@ -370,6 +359,7 @@ footer {
   display: block;
   color: #fff;
   font-size: 1.1em;
+  cursor: pointer;
 }
 
 h5.accord-header-text {
@@ -382,6 +372,10 @@ h5.accord-header-text {
   overflow: hidden;
   background: #fff;
   font-size: 0.8em;
+
+  p {
+    padding: 20px;
+  }
 }
 
 .accord-header + .accord-text {
