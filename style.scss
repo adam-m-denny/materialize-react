@@ -9,10 +9,12 @@ html {
 @keyframes slideIn {
   from {
     opacity: 0;
+    -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
 }
@@ -74,21 +76,27 @@ html {
 }
 
 .example-enter {
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 
 }
 
 .example-enter.example-enter-active {
+  -webkit-transform: translateX(0%);
   transform: translateX(0%);
+  -webkit-transition: all 500ms ease-out;
   transition: all 500ms ease-out;
 }
 
 .example-leave {
+  -webkit-transform: translateX(0%);
   transform: translateX(0%);
 }
 
 .example-leave.example-leave-active {
+  -webkit-transform: translateX(100%);
   transform: translateX(100%);
+  -webkit-transition: all 500ms ease-out;
   transition: all 500ms ease-out;
 }
 
@@ -231,8 +239,11 @@ footer {
   padding-top: 20px !important;
   background: $orange;
   margin-top: 105px;
+  -webkit-transition: 0.2s transform;
   transition: 0.2s transform;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   padding: 10px;
   @media all and (max-width: 768px){
@@ -262,6 +273,7 @@ footer {
 
   label {
     color: #fff;
+    -webkit-transition: 0.2s all;
     transition: 0.2s all;
     opacity: 1;
     margin-left: -10px;
@@ -282,7 +294,9 @@ footer {
   }
 
   input[type="submit"] {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     background-color: $green;
     float: right;
@@ -301,7 +315,9 @@ footer {
   }
 
   &.done {
+
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 
     input[type="submit"] {
       display: none;
@@ -313,23 +329,28 @@ footer {
   height: 340px;
   background: $blue;
   margin-top: 40px;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
+  -webkit-transition: 0.2s transform;
   transition: 0.2s transform;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: relative;
   top: -380px;
   color: #fff;
   text-align: center;
   padding: 10px;
-  
+
   h3 {
     font-size: 2em;
   }
   button {
+    -webkit-backface-visibility: inherit;
     backface-visibility: inherit;
   }
 
   &.done {
+    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
 }
@@ -393,6 +414,7 @@ h5.accord-header-text {
 }
 
 .accord-text {
+  -webkit-transition: 0.5s all;
   transition: 0.5s all;
   overflow: hidden;
   background: #fff;
@@ -405,6 +427,7 @@ h5.accord-header-text {
 
 .accord-header + .accord-text {
   max-height: 0px;
+  -webkit-transition: 0.75s all;
   transition: 0.75s all;
   color: #000;
   font-size: 1em;
