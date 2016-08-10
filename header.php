@@ -14,6 +14,23 @@
   var rootDir = "<?php bloginfo('template_directory'); ?>";
   var ajaxurl = "<?php admin_url('admin-ajax.php'); ?>";
 </script>
+<style>
+  @keyframes loading {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .loading {
+    animation: loading 2s cubic-bezier(0, 0, 0, 1.00);
+    margin: auto;
+    margin-top: 40vh;
+    text-align: center;
+  }
+</style>
 </head>
 <body>
 <div id="fb-root"></div>
