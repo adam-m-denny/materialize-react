@@ -34,7 +34,7 @@
     $recipient = $_POST['email'];
     $name = $_POST['name'];
 
-    sendText("You have a new inquiry from ".$name);
+    sendText("You have a new OWP inquiry from: ".$name);
     $sender = "NOREPLY@owpnow.com";
     $headers = "From: NOREPLY@owpnow.com" . "\r\n" . "Reply-To: adam.m.denny@gmail.com" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     $subject = "Thank you for your inquiry";
