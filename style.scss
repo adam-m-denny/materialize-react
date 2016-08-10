@@ -121,6 +121,11 @@ nav {
         line-height: 40px;
         display: block;
         padding: 0 5px;
+
+        &:hover {
+          background: $blue;
+          color: #fff;
+        }
         @media all and (min-width: 1200px){
           padding: 0 10px;
         }
@@ -156,7 +161,7 @@ nav {
       line-height: 40px;
 
       img {
-        height: 100px;
+        height: 130px;
       }
       i {
         height: 40px;
@@ -177,9 +182,13 @@ nav {
   color: #fff;
 }
 
+iframe {
+  height: 320px;
+}
+
 .iframe-rwd  {
   position: relative;
-  padding-bottom: 100%;
+  padding-bottom: 390px;
   padding-top: 30px;
   height: 0;
   overflow: hidden;
@@ -210,20 +219,24 @@ nav {
 footer {
   &.page-footer {
     margin-top: 0;
+
+    h5 {
+      font-size: 1em;
+    }
   }
 }
 
 .signup-form {
-  height: 290px;
+  height: 340px;
   padding-top: 20px !important;
-  background: #fb941b;
-  margin-top: 155px;
+  background: $orange;
+  margin-top: 105px;
   transition: 0.2s transform;
   backface-visibility: hidden;
   transform: rotateY(0deg);
   padding: 10px;
   @media all and (max-width: 768px){
-    margin-top: 175px;
+    margin-top: 125px;
   }
 
   h3 {
@@ -277,6 +290,9 @@ footer {
     height: 30px;
     line-height: 0;
     border-radius: 0;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
 
   &.submitting {
@@ -294,7 +310,7 @@ footer {
 }
 
 .signup-form-back {
-  height: 290px;
+  height: 340px;
   background: $blue;
   margin-top: 40px;
   transform: rotateY(180deg);
@@ -415,4 +431,22 @@ h5.accord-header-text {
 
 .float-right {
   float: right;
+}
+
+
+ul.orange-bullets {
+  list-style: none;
+  padding:0;
+  margin:0;
+
+  li {
+    padding-left: 1em;
+    text-indent: -.7em;
+
+    &:before {
+      content: "\2022 ";
+      color: $orange;
+      margin-right: 5px;
+    }
+  }
 }

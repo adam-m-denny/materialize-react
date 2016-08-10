@@ -53,7 +53,7 @@ define(function(require){
            <div className="container">
              <div className="row">
                <div className="col l6 s12">
-                 <h5 className="black-text">OWP OREGON WELLNESS PARTNERS</h5>
+                 <h5 className="black-text"><span className="owp-orange">O</span><span className="owp-blue">W</span><span className="owp-green">P</span> <span className="owp-orange">Oregon</span> <span className="owp-blue">Wellness</span> <span className="owp-green">Partners</span></h5>
                  <p className="grey-text text-darken-4">All Rights Reserved</p>
                </div>
                <div className="col l6 s12">
