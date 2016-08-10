@@ -395,6 +395,10 @@ h5.accord-header-text {
 
 .accord-header:checked + .accord-text {
   max-height: 500px;
+  overflow-y: auto;
+  @media all and (max-width: 768px){
+    max-height: 1500px;
+  }
 }
 
 .btn-green {
