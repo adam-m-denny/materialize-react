@@ -78,6 +78,7 @@ define(function(require){
           this.setState({formState: "done"});
         }.bind(this),
         error: function(e){
+          console.log(e);
           this.setState({formState: "done"});
         }.bind(this)
       });

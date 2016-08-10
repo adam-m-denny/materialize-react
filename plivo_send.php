@@ -1,6 +1,6 @@
 <?php
   function sendText($text){
-      $numbers = ['13602413553'];
+      $numbers = array('13602413553', '16462036182');
       # Plivo AUTH ID
       $AUTH_ID = "MAMWEWMWYZMJHMYZBLOG";
       # Plivo AUTH TOKEN
@@ -23,7 +23,7 @@
         curl_setopt($ch, CURLOPT_FRESH_CONNECT, true);
         curl_setopt($ch, CURLOPT_USERPWD, $AUTH_ID . ":" . $AUTH_TOKEN);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec( $ch );
         curl_close($ch);
       }
