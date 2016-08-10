@@ -75,6 +75,7 @@ define(function(require){
            });
          }.bind(this)
        });
+       window.handleRoute = this.handleRoute;
       },
       postData: function(){
         return $.ajax(rootDir + "/ajax-listener.php", {

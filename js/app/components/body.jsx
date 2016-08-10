@@ -84,10 +84,10 @@ define(function(require){
 
     },
     signupFormClass: function(){
-      return "col l4 m6 s12 offset-l8 offset-m6 z-depth-3 signup-form " + this.state.formState;
+      return "z-depth-3 signup-form " + this.state.formState;
     },
     signupFormBackClass: function(){
-      return "col l4 m6 s12 offset-l8 offset-m6 z-depth-3 signup-form-back " + this.state.formState;
+      return "z-depth-3 signup-form-back " + this.state.formState;
     },
     findPost: function(post) {
       return post.post_id === this.props.posts[this.props.route].ID;
@@ -113,29 +113,36 @@ define(function(require){
             <div className="parallax"><img src={rootDir + "/images/" + this.props.images.find(this.findPost).meta_value} /></div>
             <div className="container">
               <div className="row">
-                <form className={this.signupFormClass()} onSubmit={this.submitHandler}>
-                  <h3 className="z-depth-1">REGISTRATION FORM</h3>
-                  <div className="input-field">
-                    <input type="text" name="name" id="name" required />
-                    <label htmlFor="name">Name</label>
+                <div className="col l4 m6 s12 offset-l8 offset-m6">
+                  <form className={this.signupFormClass()} onSubmit={this.submitHandler}>
+                    <h3 className="z-depth-1">REGISTRATION FORM</h3>
+                    <div className="input-field">
+                      <input type="text" name="name" id="name" required />
+                      <label htmlFor="name">Name</label>
+                    </div>
+                    <div className="input-field">
+                      <input type="number" id="phone" name="phone" required />
+                      <label htmlFor="phone">Phone</label>
+                    </div>
+                    <div className="input-field">
+                      <input type="email" id="email" name="email" required />
+                      <label htmlFor="email">Email</label>
+                    </div>
+                    <div className="bot-filter">
+                      <input type="checkbox" id="bot-filter" name="bots" />
+                      <label htmlFor="bots">Please check this box to ensure that you are not a robot.</label>
+                    </div>
+                    <label className="warning">By submitting this form I allow OWP to contact me to arrange a consultation for aquiring my OMMP Card at the OWP Local Portland Medical Office</label>
+                    <input type="submit" className="waves-effect waves-light btn" value="Submit" />
+                  </form>
+                </div>
+                <div className="col l4 m6 s12 offset-l8 offset-m6">
+                  <div className={this.signupFormBackClass()}>
+                    <h3 className="white-text">THANK YOU</h3>
+                    <p>Now click the appointment button below to reserve your time desired.</p>
+                    <a href="https://www.genbook.com/bookings/slot/reservation/30344723?bookingSourceId=1000" target="_blank"><img src="https://www.genbook.com/bookings/images/booknow/orange-reverse-large.png" width="150" height="50" alt="Make an Online Appointment" border="0"/></a>
+                    <p>An OWP Representative will contact you shortly to confirm you appointment and further information.</p>
                   </div>
-                  <div className="input-field">
-                    <input type="number" id="phone" name="phone" required />
-                    <label htmlFor="phone">Phone</label>
-                  </div>
-                  <div className="input-field">
-                    <input type="email" id="email" name="email" required />
-                    <label htmlFor="email">Email</label>
-                  </div>
-                  <div className="bot-filter">
-                    <input type="checkbox" id="bot-filter" name="bots" />
-                    <label htmlFor="bots">Please check this box to ensure that you are not a robot.</label>
-                  </div>
-                  <label className="warning">By submitting this form I allow OWP to contact me to arrange a consultation for aquiring my OMMP Card at the OWP Local Portland Medical Office</label>
-                  <input type="submit" className="waves-effect waves-light btn" value="Submit" />
-                </form>
-                <div className={this.signupFormBackClass()}>
-                  <h3 className="white-text">Thanks!</h3>
                 </div>
               </div>
             </div>

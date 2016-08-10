@@ -66,7 +66,7 @@ html {
 }
 
 .parallax-container {
-  height: 400px;
+  height: 480px;
 
   @media all and (max-width: 768px){
     height: 480px;
@@ -120,7 +120,10 @@ nav {
         color: black;
         line-height: 40px;
         display: block;
-
+        padding: 0 5px;
+        @media all and (min-width: 1200px){
+          padding: 0 10px;
+        }
         i {
           line-height: inherit !important;
           height: 30px !important;
@@ -176,7 +179,7 @@ nav {
 
 .iframe-rwd  {
   position: relative;
-  padding-bottom: 65.25%;
+  padding-bottom: 100%;
   padding-top: 30px;
   height: 0;
   overflow: hidden;
@@ -214,11 +217,11 @@ footer {
   height: 290px;
   padding-top: 20px !important;
   background: #fb941b;
-  margin-top: 95px;
+  margin-top: 155px;
   transition: 0.2s transform;
   backface-visibility: hidden;
   transform: rotateY(0deg);
-
+  padding: 10px;
   @media all and (max-width: 768px){
     margin-top: 175px;
   }
@@ -299,7 +302,12 @@ footer {
   backface-visibility: hidden;
   position: relative;
   top: -330px;
-
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  h3 {
+    font-size: 2em;
+  }
   button {
     backface-visibility: inherit;
   }
@@ -348,7 +356,7 @@ footer {
 }
 
 .contact-header {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: bold;
   margin-bottom: -20px;
 }
@@ -387,4 +395,20 @@ h5.accord-header-text {
 
 .accord-header:checked + .accord-text {
   max-height: 500px;
+}
+
+.btn-green {
+  background-color: $green;
+
+  &:hover {
+    background-color: $blue;
+  }
+}
+
+.color-orange {
+  color: $orange;
+}
+
+.float-right {
+  float: right;
 }
