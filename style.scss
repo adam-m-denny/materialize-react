@@ -450,3 +450,11 @@ ul.orange-bullets {
     }
   }
 }
+
+.row {
+  .col {
+    @media all and (max-width: 992px){
+      margin-bottom: 20px;
+    }
+  }
+}
