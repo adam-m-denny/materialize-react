@@ -36,14 +36,14 @@
 
     sendText("You have a new OWP inquiry from: ".$name);
     $sender = "NOREPLY@owpnow.com";
-    $headers = "From: NOREPLY@owpnow.com" . "\r\n" . "Reply-To: adam.m.denny@gmail.com" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $headers = "From: NOREPLY@owpnow.com" . "\r\n" . "Reply-To: OWPRep@owpnow.com" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     $subject = "Thank you for your inquiry";
     $message = "Thank you for contacting Oregon Wellness Partners. An OWP representative will be contacting you shortly regarding your appointment.";
     mail($recipient, $subject, $message, $headers);
 
     $recipient = "adam.m.denny@gmail.com";
     $sender = "NOREPLY@owpnow.com";
-    $headers = "From: NOREPLY@owpnow.com" . "\r\n" . "Reply-To: drewfrankel@gmail.com" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $headers = "From: NOREPLY@owpnow.com" . "\r\n" . "Reply-To: OWPRep@owpnow.com" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     $subject = "OWP has a new inquiry";
     $message = "OWP has a new appointment request from ". $_POST['name'] . " at " . $_POST['email'] . " " . $_POST['phone'];
     mail($recipient, $subject, $message, $headers);

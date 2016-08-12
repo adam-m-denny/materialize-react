@@ -52,6 +52,7 @@ define(function(require){
         <footer className="page-footer white">
            <div className="container">
              <div className="row">
+               <hr />
                <div className="col l6 s12">
                  <h5 className="black-text"><span className="owp-orange">O</span><span className="owp-blue">W</span><span className="owp-green">P</span> <span className="owp-orange">Oregon</span> <span className="owp-blue">Wellness</span> <span className="owp-green">Partners</span></h5>
                  <p className="grey-text text-darken-4">All Rights Reserved</p>
@@ -63,8 +64,8 @@ define(function(require){
                </div>
              </div>
            </div>
-           <div className="footer-copyright">
-             <div className="container grey-text text-darken-4">
+           <div className="footer-copyright blue-copyright">
+             <div className="container">
              © 2016 Copyright OWP
              </div>
            </div>

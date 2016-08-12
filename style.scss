@@ -421,7 +421,7 @@ h5.accord-header-text {
   font-size: 0.8em;
 
   p {
-    padding: 20px;
+    padding: 0 20px;
   }
 }
 
@@ -479,6 +479,28 @@ ul.orange-bullets {
   .col {
     @media all and (max-width: 992px){
       margin-bottom: 20px;
+    }
+  }
+}
+
+.border-right {
+  @media all and (min-width: 769px) {
+    border-right: 1px solid;
+  }
+}
+
+.blue-copyright {
+  background-color: $blue !important;
+  color: #fff;
+}
+
+.center-list {
+  ul {
+    text-align: center;
+
+    li {
+      text-align: center;
+      margin-left: -15px;
     }
   }
 }
