@@ -184,7 +184,7 @@ define(function(require){
         ],
         images: [
           {
-            meta_value: "owp_home_one_NEW.jpg",
+            meta_value: "home_owp_new_081216_trim2.jpg",
             post_id: 1
           }
         ],
