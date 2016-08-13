@@ -45,7 +45,7 @@
     $sender = "NOREPLY@owpnow.com";
     $headers = "From: OWP Representative <info@owpnow.com>" . "\r\n" . "Reply-To: OWP Representative <info@owpnow.com>" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     $subject = "OWP has a new inquiry";
-    $message = "OWP has a new appointment request from ". $_POST['name'] . " at " . $_POST['email'] . " " . $_POST['phone'];
+    $message = "OWP has a new appointment request from:\n\n ". $_POST['name'] . "\n\n" . $_POST['email'] . "\n\n" . $_POST['phone'];
     mail($recipient, $subject, $message, $headers);
 
     echo("success");
