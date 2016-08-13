@@ -60,6 +60,8 @@ define(function(require){
                <div className="col l6 s12">
                  <ul>
                   {footerNavLinks}
+                  <li className="social"><a href="https://www.facebook.com/owppdx/"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li className="social"><a href="https://www.instagram.com/owpnow/"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
                  </ul>
                </div>
              </div>
