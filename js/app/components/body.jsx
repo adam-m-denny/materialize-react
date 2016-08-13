@@ -57,6 +57,7 @@ define(function(require){
     componentDidUpdate: function(){
       $('.parallax').parallax();
       $('label.accord-header').click(function(){
+        $('label.accord-header').css({'background-color': '#fb941b'});
         if(!$(this).children('.accord-header')[0].checked){
           $(this).css({'background-color' : '#fb941b'});
         } else {
