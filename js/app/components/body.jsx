@@ -112,12 +112,12 @@ define(function(require){
       return (
         <div onAnimationEnd={this.animationEnded()}>
           <div className="parallax-container">
-            <div className="parallax"><img src={rootDir + "/images/" + this.props.images.find(this.findPost).meta_value} /></div>
+            <div className="parallax"><img src={this.props.images.find(this.findPost).meta_value} /></div>
             <div className="container">
               <div className="row">
                 <div className="col l4 m6 s12 offset-l8 offset-m6">
                   <form className={this.signupFormClass()} onSubmit={this.submitHandler}>
-                    <h3 className="z-depth-1">REGISTRATION FORM</h3>
+                    <h3 className="z-depth-1">OWP APPOINTMENT REQUEST</h3>
                     <div className="input-field">
                       <input type="text" name="name" id="name" required />
                       <label htmlFor="name">Name</label>

@@ -50,4 +50,25 @@
 
     echo("success");
   }
+  if($_POST['request'] == "contact"){
+
+    $recipient = "drewfrankel@gmail.com";
+    $name = $_POST['name'];
+    $from = $_POST['email'];
+
+    $sender = "NOREPLY@owpnow.com";
+    $headers = "From: OWP Representative <info@owpnow.com>" . "\r\n" . "Reply-To: OWP Representative <info@owpnow.com>" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $subject = "New OWP Contact Message";
+    $message = $name . "\n\n" . $from . "\n\n" . "Message: " . $_POST['message'];
+    mail($recipient, $subject, $message, $headers);
+
+    $recipient = "adam.m.denny@gmail.com";
+    $sender = "NOREPLY@owpnow.com";
+    $headers = "From: OWP Representative <info@owpnow.com>" . "\r\n" . "Reply-To: OWP Representative <info@owpnow.com>" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $subject = "OWP has a new inquiry";
+    $message = $name . "\n\n" . $from . "\n\n" . "Message: " . $_POST['message'];
+    mail($recipient, $subject, $message, $headers);
+
+    echo("success");
+  }
 ?>

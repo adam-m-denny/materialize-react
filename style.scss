@@ -169,7 +169,17 @@ nav {
       line-height: 40px;
 
       img {
-        height: 100px;
+        height: 400px;
+        -webkit-filter: drop-shadow(0 2px 1px rgba(0,0,0,0.5));
+        margin-top: -80px;
+
+        @media all and (max-width: 992px){
+          -webkit-filter: none;
+          margin-top: initial;
+          height: 200px;
+          max-height: 150px;
+          margin-top: -35px;
+        }
       }
       i {
         height: 40px;
