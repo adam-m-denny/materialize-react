@@ -515,3 +515,9 @@ ul.orange-bullets {
     }
   }
 }
+
+a.brand-logo {
+  @media all and (min-width: 992px){
+    width: 0;
+  }
+}

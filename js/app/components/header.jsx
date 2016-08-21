@@ -54,7 +54,7 @@ define(function(require){
       return (
         <nav className="white">
           <div className="nav-wrapper white black-text container">
-            <a href="#!" style={{width: 0}} className="brand-logo black-text"><img src="./wp-content/themes/materialize-react/images/OWPLogo.svg" /></a>
+            <a href="#!" className="brand-logo black-text"><img src="./wp-content/themes/materialize-react/images/OWPLogo.png" /></a>
             <a href="#" data-activates="mobile-demo" className="button-collapse black-text"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">
               {navLinks}
