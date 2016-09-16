@@ -68,10 +68,10 @@ html {
 }
 
 .parallax-container {
-  height: 480px;
+  height: 380px;
 
   @media all and (max-width: 768px){
-    height: 480px;
+    height: 380px;
   }
 }
 
@@ -248,7 +248,7 @@ footer {
   height: 340px;
   padding-top: 20px !important;
   background: $orange;
-  margin-top: 105px;
+  margin-top: 25px;
   -webkit-transition: 0.2s transform;
   transition: 0.2s transform;
   -webkit-backface-visibility: hidden;
@@ -257,7 +257,7 @@ footer {
   transform: rotateY(0deg);
   padding: 10px;
   @media all and (max-width: 768px){
-    margin-top: 125px;
+    margin-top: 25px;
   }
 
   h3 {
@@ -338,7 +338,7 @@ footer {
 .signup-form-back {
   height: 340px;
   background: $blue;
-  margin-top: 40px;
+  margin-top: 15px;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   -webkit-transition: 0.2s transform;

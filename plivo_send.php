@@ -1,6 +1,6 @@
 <?php
   function sendText($text){
-      $numbers = array('13602413553', '16462036182');
+      $numbers = array('15033515823', '16462036182');
       # Plivo AUTH ID
       $AUTH_ID = "MAMWEWMWYZMJHMYZBLOG";
       # Plivo AUTH TOKEN
