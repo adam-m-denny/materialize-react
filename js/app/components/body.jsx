@@ -86,10 +86,10 @@ define(function(require){
 
     },
     signupFormClass: function(){
-      return "z-depth-3 signup-form " + this.state.formState;
+      return "z-depth-1 signup-form " + this.state.formState;
     },
     signupFormBackClass: function(){
-      return "z-depth-3 signup-form-back " + this.state.formState;
+      return "z-depth-1 signup-form-back " + this.state.formState;
     },
     findPost: function(post) {
       return post.post_id === this.props.posts[this.props.route].ID;
