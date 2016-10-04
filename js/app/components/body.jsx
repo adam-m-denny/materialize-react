@@ -134,7 +134,7 @@ define(function(require){
                       <input type="checkbox" id="bot-filter" name="bots" />
                       <label htmlFor="bots">Please check this box to ensure that you are not a robot.</label>
                     </div>
-                    <label className="warning">By submitting this form I allow OWP to contact me to arrange a consultation for aquiring my OMMP Card at the OWP Local Portland Medical Office</label>
+                    <label className="warning">By submitting this form, I allow OWP to contact me to arrange consultation for services at the OWP local Portland medical office.</label>
                     <input type="submit" className="waves-effect waves-light btn" value="Submit" />
                   </form>
                 </div>
