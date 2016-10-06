@@ -58,7 +58,7 @@ define(function(require){
             <a href="#" data-activates="mobile-demo" className="button-collapse black-text"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">
               {navLinks}
-              <li className="social"><a href="https://www.facebook.com/owppdx/"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li className="social"><a href="https://www.facebook.com/owpnow/"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
               <li className="social"><a href="https://www.instagram.com/owpnow/"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
             <ul className="side-nav" id="mobile-demo">
