@@ -41,7 +41,14 @@
     $message = "Thank you for contacting Oregon Wellness Partners. An OWP representative will be contacting you shortly regarding your appointment.";
     mail($recipient, $subject, $message, $headers);
 
-    $recipient = "adam.m.denny@gmail.com";
+    $recipient = "info@owpnow.com";
+    $sender = "NOREPLY@owpnow.com";
+    $headers = "From: OWP Representative <info@owpnow.com>" . "\r\n" . "Reply-To: OWP Representative <info@owpnow.com>" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $subject = "OWP has a new inquiry";
+    $message = "OWP has a new appointment request from:\n\n ". $_POST['name'] . "\n\n" . $_POST['email'] . "\n\n" . $_POST['phone'];
+    mail($recipient, $subject, $message, $headers);
+
+    $recipient = "preston@owpnow.com";
     $sender = "NOREPLY@owpnow.com";
     $headers = "From: OWP Representative <info@owpnow.com>" . "\r\n" . "Reply-To: OWP Representative <info@owpnow.com>" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     $subject = "OWP has a new inquiry";
@@ -52,7 +59,7 @@
   }
   if($_POST['request'] == "contact"){
 
-    $recipient = "drewfrankel@gmail.com";
+    $recipient = "info@owpnow.com";
     $name = $_POST['name'];
     $from = $_POST['email'];
 
@@ -62,7 +69,7 @@
     $message = $name . "\n\n" . $from . "\n\n" . "Message: " . $_POST['message'];
     mail($recipient, $subject, $message, $headers);
 
-    $recipient = "adam.m.denny@gmail.com";
+    $recipient = "preston@owpnow.com";
     $sender = "NOREPLY@owpnow.com";
     $headers = "From: OWP Representative <info@owpnow.com>" . "\r\n" . "Reply-To: OWP Representative <info@owpnow.com>" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     $subject = "OWP has a new inquiry";
